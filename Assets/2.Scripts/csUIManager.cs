@@ -6,6 +6,7 @@ public class csUIManager : MonoBehaviour {
 
 	public Canvas uiCanvas;
 	public Canvas topUiCanvas;
+	private string restartScene;
 
 	public static csUIManager instance = null;
 
@@ -56,6 +57,14 @@ public class csUIManager : MonoBehaviour {
 		#else
 			Application.Quit();
 		#endif
+	}
+
+	public void Restart_Clicked ()
+	{
+		restartScene = SceneManager.GetActiveScene ().name;
+		Debug.Log (restartScene);
+
+		SceneManager.LoadScene (restartScene);
 	}
 
 }

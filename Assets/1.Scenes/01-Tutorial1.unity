@@ -1127,14 +1127,9 @@ Prefab:
     - {fileID: 114000012876766570, guid: a8a9bcd83e27cb04e9f576e6372b8bd0, type: 2}
     - {fileID: 114000012333153766, guid: a8a9bcd83e27cb04e9f576e6372b8bd0, type: 2}
     - {fileID: 114000013803052154, guid: a8a9bcd83e27cb04e9f576e6372b8bd0, type: 2}
+    - {fileID: 114000012322145042, guid: a8a9bcd83e27cb04e9f576e6372b8bd0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a8a9bcd83e27cb04e9f576e6372b8bd0, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &682810068 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012322145042, guid: a8a9bcd83e27cb04e9f576e6372b8bd0,
-    type: 2}
-  m_PrefabInternal: {fileID: 682810067}
-  m_Script: {fileID: 11500000, guid: cc11a4421145cb6419200738f5bb0931, type: 3}
 --- !u!1 &682810069 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000014012647466, guid: a8a9bcd83e27cb04e9f576e6372b8bd0,
@@ -2495,8 +2490,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 682810068}
-        m_MethodName: restart
+      - m_Target: {fileID: 1224553769}
+        m_MethodName: Restart_Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

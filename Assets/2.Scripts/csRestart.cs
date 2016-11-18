@@ -8,9 +8,4 @@ public class csRestart : MonoBehaviour {
 	public void restart () {
 		SceneManager.LoadScene (restartScene);
 	}
-
-	public void GoFirst () {
-		DestroyObject(FindObjectOfType<csTimer> ());
-		SceneManager.LoadScene ("01-Tutorial1");
-	}
 }
