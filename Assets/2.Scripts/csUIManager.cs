@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class csUIManager : MonoBehaviour {
 
 	public Canvas uiCanvas;
+	public Canvas topUiCanvas;
 
 	public static csUIManager instance = null;
 
@@ -17,8 +19,18 @@ public class csUIManager : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
-		uiCanvas.enabled = false;
+	void Update () {
+		if (SceneManager.GetActiveScene ().name == "00-Intro")
+		{
+			if (topUiCanvas.enabled == true) 
+			{
+				topUiCanvas.enabled = false;
+			}
+		} 
+		else 
+		{
+			topUiCanvas.enabled = true;
+		}
 	}
 
 	public void Menu_Clicked ()
@@ -30,4 +42,11 @@ public class csUIManager : MonoBehaviour {
 	{
 		uiCanvas.enabled = false;
 	}
+
+	public void MainMenu_Clicked ()
+	{
+		uiCanvas.enabled = false;
+		SceneManager.LoadScene ("00-Intro");
+	}
+
 }
