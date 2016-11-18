@@ -31,11 +31,11 @@ public class csTimer : MonoBehaviour {
 	void Update () {
 		if (SceneManager.GetActiveScene ().name == "00-Intro") {
 			time = 0;
+		} else if (SceneManager.GetActiveScene ().name == "98-PrintScore") {
+			timer.enabled = false;	
+		} else if (SceneManager.GetActiveScene ().name == "01-Tutorial1") {
+			timer.enabled = true;
 		}
-		else if(SceneManager.GetActiveScene ().name == "98-PrintScore")
-			{
-				timer.enabled = false;	
-			}
 		if (clearstate.text == "") {
 			time += Time.deltaTime;
 			timer.text = time.ToString ("F1");
