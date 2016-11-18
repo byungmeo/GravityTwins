@@ -21,7 +21,7 @@ public class csUIManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Update () {
-		if (SceneManager.GetActiveScene ().name == "00-Intro")
+		if (SceneManager.GetActiveScene ().name == "00-Intro" || SceneManager.GetActiveScene ().name == "98-PrintScore")
 		{
 			if (topUiCanvas.enabled == true) 
 			{
@@ -62,8 +62,6 @@ public class csUIManager : MonoBehaviour {
 	public void Restart_Clicked ()
 	{
 		restartScene = SceneManager.GetActiveScene ().name;
-		Debug.Log (restartScene);
-
 		SceneManager.LoadScene (restartScene);
 	}
 

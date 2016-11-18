@@ -32,6 +32,10 @@ public class csTimer : MonoBehaviour {
 		if (SceneManager.GetActiveScene ().name == "00-Intro") {
 			time = 0;
 		}
+		else if(SceneManager.GetActiveScene ().name == "98-PrintScore")
+			{
+				timer.enabled = false;	
+			}
 		if (clearstate.text == "") {
 			time += Time.deltaTime;
 			timer.text = time.ToString ("F1");
