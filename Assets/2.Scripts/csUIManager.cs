@@ -25,4 +25,9 @@ public class csUIManager : MonoBehaviour {
 	{
 		uiCanvas.enabled = true;
 	}
+
+	public void Resume_Clicked ()
+	{
+		uiCanvas.enabled = false;
+	}
 }
