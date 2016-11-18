@@ -49,4 +49,13 @@ public class csUIManager : MonoBehaviour {
 		SceneManager.LoadScene ("00-Intro");
 	}
 
+	public void Exit_Clicked ()
+	{
+		#if UNITY_EDITOR
+			UnityEditor.EditorApplication.isPlaying = false;
+		#else
+			Application.Quit();
+		#endif
+	}
+
 }
