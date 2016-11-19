@@ -52,11 +52,8 @@ public class csUIManager : MonoBehaviour {
 
 	public void Exit_Clicked ()
 	{
-		#if UNITY_EDITOR
-			UnityEditor.EditorApplication.isPlaying = false;
-		#else
-			Application.Quit();
-		#endif
+		Application.Quit ();
+		Debug.Log ("quit complete");
 	}
 
 	public void Restart_Clicked ()
