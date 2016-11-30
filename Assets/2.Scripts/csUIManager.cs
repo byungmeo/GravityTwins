@@ -62,9 +62,11 @@ public class csUIManager : MonoBehaviour {
 
 	public void Restart_Clicked ()
 	{
-		Time.timeScale = 1;
-		restartScene = SceneManager.GetActiveScene ().name;
-		SceneManager.LoadScene (restartScene);
+		if (uiCanvas.enabled == false) 
+		{
+			restartScene = SceneManager.GetActiveScene ().name;
+			SceneManager.LoadScene (restartScene);
+		}
 	}
 
 }
