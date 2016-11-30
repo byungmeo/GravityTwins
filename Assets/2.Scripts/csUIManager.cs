@@ -37,15 +37,19 @@ public class csUIManager : MonoBehaviour {
 	public void Menu_Clicked ()
 	{
 		uiCanvas.enabled = true;
+		Time.timeScale = 0;
+	
 	}
 
 	public void Resume_Clicked ()
 	{
+		Time.timeScale = 1;
 		uiCanvas.enabled = false;
 	}
 
 	public void MainMenu_Clicked ()
 	{
+		Time.timeScale = 1;
 		uiCanvas.enabled = false;
 		SceneManager.LoadScene ("00-Intro");
 	}
@@ -58,6 +62,7 @@ public class csUIManager : MonoBehaviour {
 
 	public void Restart_Clicked ()
 	{
+		Time.timeScale = 1;
 		restartScene = SceneManager.GetActiveScene ().name;
 		SceneManager.LoadScene (restartScene);
 	}
